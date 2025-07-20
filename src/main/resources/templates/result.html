@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+
+      h1 {
+      margin: 0 0 20px;
+      font-weight: 800;
+      font-size: 80px;
+      color: lightgreen;
+      }
+
+      p {
+      margin: 0 0 5px;
+      font-size: 20px;
+      }
+
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: lightgreen;
+      }
+
+      .left-part {
+      padding: 25px;
+      margin: 25px;
+      background: #f5f5f5;
+      }
+
+
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+      }
+
+      .fa-comment{
+      transform: rotate(-20deg);
+      }
+
+      .fa-star , .fa-eye{
+      transform: rotate(10deg);
+      }
+
+      @media (min-width: 568px) {
+      .main-block {
+      flex-direction: row;
+      }
+
+      .left-part, .right-part {
+      width: 50%;
+      }
+
+      .fa-comment {
+      margin-top: 0;
+      margin-left: 20%;
+      }
+
+      .fa-star {
+      margin-top: -10%;
+      margin-left: 65%;
+      }
+
+      .fa-eye {
+      margin-top: 2%;
+      margin-left: 28%;
+      }
+
+      .fa-hourglass {
+      margin-top: 8%;
+      margin-left: 50%;
+      }
+
+    </style>
+</head>
+<body>
+<div class="main-block">
+    <div class="left-part">
+        <h1 th:text="${heading}"/>
+        <p th:text="${body}"  />
+    </div>
+    <div class="right-part">
+        <i class="fas fa-eye"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-comment"></i>
+        <i class="fas fa-hourglass"></i>
+    </div>
+
+</div>>
+
+</body>
+</html>
